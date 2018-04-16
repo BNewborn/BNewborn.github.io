@@ -2,9 +2,8 @@
 # This file contains configuration flags to customize your site
 #
 
-#Theme - added as per ReadMe
-theme: jekyll-theme-midnight
-#theme: jekyll-theme-time-machine
+#heme - added as per ReadMe
+remote_theme: "mmistakes/minimal-mistakes"
 
 # Name of your site (displayed in the header)
 name: Brian Newborn
