@@ -69,7 +69,8 @@ kramdown:
     css_class: 'highlight'
 
 #Theme - added as per ReadMe
-theme: jekyll-theme-time-machine
+theme: jekyll-theme-midnight
+#theme: jekyll-theme-time-machine
 
 # Set the Sass partials directory, as we're using @imports
 sass:
