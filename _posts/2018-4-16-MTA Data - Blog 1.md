@@ -66,7 +66,7 @@ This would certainly make sense - Willets Point is somewhat of a larger station 
   <img src="/images/mta_images/NYCT_Subway_tweet.png" alt="Subway with Citi in the Background"/>
 </p>
 
-The MTA did in fact stop trains at Mets-Willets Point that day! [Link to the tweet here.](https://twitter.com/NYCTSubway/status/824370519537545217). And, note the time of this tweet. This fire occurred in the afternoon, so the majority of disrupted commutes would occur recorded as exits, since commuters were traveling back home to eastern Queens or Long Island. And anybody planning on taking the subway into Manhattan in the afternoon had to enter here instead of getting on at Main St.
+The MTA did in fact stop trains at Mets-Willets Point that day! [Link to the tweet here.](https://twitter.com/NYCTSubway/status/824370519537545217) And, note the time of this tweet. This fire occurred in the afternoon, so the majority of disrupted commutes would occur recorded as exits, since commuters were traveling back home to eastern Queens or Long Island. And anybody planning on taking the subway into Manhattan in the afternoon had to enter here instead of getting on at Main St.
 
 So it certainly makes sense that exits were much higher at Mets-Willets than they normally would have, while entries were somewhat higher than their expected value.
 
