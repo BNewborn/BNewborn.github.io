@@ -3,7 +3,7 @@
 #
 
 #heme - added as per ReadMe
-remote_theme: "mmistakes/minimal-mistakes"
+remote_theme: mmistakes/minimal-mistakes
 
 # Name of your site (displayed in the header)
 name: Brian Newborn (2)
