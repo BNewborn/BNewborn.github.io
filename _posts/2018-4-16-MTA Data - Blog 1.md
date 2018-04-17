@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MTA Data - Metis Project \#1
+title: MTA Data - Metis Project 1
 description: A review of turnstile activity in Queens
 image: assets/images/mta_logo.gif
 ---
