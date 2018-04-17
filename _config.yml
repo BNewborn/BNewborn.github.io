@@ -3,7 +3,7 @@ title: Brian's Data Science Blog
 subtitle: by Brian Newborn
 email: bri.newborn@gmail.com
 description: A blog about my data science projects and exploration.
-baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
+baseurl: "/BNewborn.github.io" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
 author: Brian Newborn
 street_address:
