@@ -8,8 +8,8 @@ My name is Brian Newborn. I'm an aspiring Data Scientist studying as part of the
 
 ### More Information
 
-I'm a big Mets, Knicks and Jets fan (pity me, I know!). When I'm not working in Python, I love to read my historical books outside or to play basketball with friends. 
+I'm a big Mets, Knicks and Jets fan (pity me, I know!). When I'm not working in Python, I love to read my historical books outside or to play basketball with friends.
 
 ### Contact me
 
-[EMAIL](mailto:bri.newborn@gmail.com)
+[Email](mailto:bri.newborn@gmail.com)
