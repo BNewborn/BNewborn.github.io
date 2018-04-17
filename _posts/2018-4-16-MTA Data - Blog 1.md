@@ -1,6 +1,8 @@
 ---
 layout: post
-title: MTA Data - Metis Project #1
+title: MTA Data - Metis Project \#1
+description: A review of turnstile activity in Queens
+image: assets/images/mta_logo.gif
 ---
 
 Hello world! My name is Brian Newborn, and thanks for coming to my personal blog.
@@ -10,7 +12,7 @@ Today I am going to be writing up some interesting findings that I came across w
 For this first week of classes, we worked on multiple projects centered around New York City's publicly available MTA subway usage datasets. You can find this data [here](http://web.mta.info/developers/turnstile.html).
 
 <p align="center">
-  <img src="/images/mta_images/mta_logo.gif" alt="MTA Logo"/>
+  <img src="/assets/images/mta_images/mta_logo.gif" alt="MTA Logo"/>
 </p>
 
 Though I worked on a group project with a few classmates, I want to share an interesting finding that I discovered when working on a solo coding "challenge". Before we jump into this, let me introduce the dataset and column headers.
@@ -26,7 +28,7 @@ Though I worked on a group project with a few classmates, I want to share an int
 <br>
 Here's an example screenshot of some of the MTA data and headers.
 <p align="center">
-  <img src="/images/mta_images/mta_data_sample.png" alt="MTA Data - Sample"/>
+  <img src="/assets/images/mta_images/mta_data_sample.png" alt="MTA Data - Sample"/>
 </p>
 
 As the MTA datasets are large files spanning years of subway data, I had to narrow down the time window that my analysis would cover. Being a January birthday, I chose to use data from 12/31/2016 to 1/27/2016. This came out to around 777,000 lines of data (imagine how large this analysis would be with even just a few months!). After cleaning this data and removing negative or erroneous turnstile counts (sometimes the turnstile counters reset their count randomly, but this was a relatively rare occurrence), I was ready to investigate and explore this data using Python.
@@ -36,12 +38,12 @@ Specifically, I worked mostly with Pandas, a valuable Python library used for ev
 Amidst a few exercises, I wanted to isolate our data to one station and drill into daily entries and exits. Being a Mets fan (LGM!), I decided to isolate the data to the 7 Train stop at Mets-Willets Point. This is the subway station you get off at when heading to Citi Field, home of the Mets. But, there are plenty of people living around here, as evidenced by the fact that there are at least a few thousand entries and exits through this station on a given day, even in January.
 
 <p align="center">
-  <img src="/images/mta_images/citi_field.jpg" alt="Subway with Citi in the Background"/>
+  <img src="/assets/images/mta_images/citi_field.jpg" alt="Subway with Citi in the Background"/>
 </p>
 
 After filtering our larger dataset down to just this station, I then grouped turnstile counts by day to see entries/exits on a day-by-day basis.
 <p align="center">
-  <img src="/images/mta_images/citi_daily_ridership_117.png" alt="Subway with Citi in the Background"/>
+  <img src="/assets/images/mta_images/citi_daily_ridership_117.png" alt="Subway with Citi in the Background"/>
 </p>
 
 As you can see, there is a somewhat standard pattern for the first few weeks. Weekend ridership drops to around two thousand per day, while weekdays have closer to 5000 entries/exits per day. Thursdays and Fridays tend to be a bit higher than earlier weekdays, but this is not a massive difference. But wait, notice that huge spike on January 25? Why would there be so many more riders (over 16,000) versus other weekdays?
@@ -49,7 +51,7 @@ As you can see, there is a somewhat standard pattern for the first few weeks. We
 After double and triple checking my dataset for duplicates or bad values, I drilled further into the outlying data. Let's see the difference between entries and exits at Willets Point across the days - maybe there's a discrepancy there.
 
 <p align="center">
-  <img src="/images/mta_images/citi_daily_entriesexits_117.png" alt="Subway with Citi in the Background"/>
+  <img src="/assets/images/mta_images/citi_daily_entriesexits_117.png" alt="Subway with Citi in the Background"/>
 </p>
 
 Daily exits are in red and entries are in purple.
@@ -63,7 +65,7 @@ I dug into local news articles from then, finding that there was actually a mass
 This would certainly make sense - Willets Point is somewhat of a larger station on the 7 Line, so maybe the MTA stopped trains there to avoid sending trains into a busy emergency scenario. And then after some more searching, I found our "smoking gun".
 
 <p align="center">
-  <img src="/images/mta_images/NYCT_Subway_tweet.png" alt="Subway with Citi in the Background"/>
+  <img src="/assets/images/mta_images/NYCT_Subway_tweet.png" alt="Subway with Citi in the Background"/>
 </p>
 
 The MTA did in fact stop trains at Mets-Willets Point that day! [Link to the tweet here.](https://twitter.com/NYCTSubway/status/824370519537545217) And, note the time of this tweet. This fire occurred in the afternoon, so the majority of disrupted commutes would occur recorded as exits, since commuters were traveling back home to eastern Queens or Long Island. And anybody planning on taking the subway into Manhattan in the afternoon had to enter here instead of getting on at Main St.
@@ -71,7 +73,7 @@ The MTA did in fact stop trains at Mets-Willets Point that day! [Link to the twe
 So it certainly makes sense that exits were much higher at Mets-Willets than they normally would have, while entries were somewhat higher than their expected value.
 
 <p align="center">
-  <img src="/images/mta_images/7train.png" alt="7 train route"/>
+  <img src="/assets/images/mta_images/7train.png" alt="7 train route"/>
 </p>
 
 When I found this tweet, I was really amazed that I was able to notice something odd in the data, look at the real-world context from that day, and ultimately find a likely cause. It feels pretty cool to be able to parse through a 700K line dataset and find patterns that match the real world. While this is no event to celebrate (I am certainly really sorry for those business owners and local residents that lost property in the fire), this code discovery is worth celebrating.
