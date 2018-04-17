@@ -1,0 +1,35 @@
+# site settings
+title: Brian's Data Science Blog
+subtitle: by Brian Newborn
+email: bri.newborn@gmail.com
+description: A blog about my data science projects and exploration.
+baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
+url: # the base hostname & protocol for your site
+author: Brian Newborn
+street_address:
+city:
+state:
+zip_code:
+country:
+phone:
+
+# homepage tiles
+tiles-source: posts # accepts "posts" or "pages"
+tiles-count: 6
+
+# social settings
+500px_url:
+facebook_url:
+github_url:
+gitlab_url:
+instagram_url:
+linkedin_url: https://www.linkedin.com/in/brian-newborn
+pinterest_url:
+slack_url:
+twitter_url:
+
+# build settings
+markdown: kramdown
+
+sass:
+  style: compressed
