@@ -3,7 +3,7 @@
 #
 
 #heme - added as per ReadMe
-theme: jekyll-theme-leap-day
+theme:jekyll-theme-leap-day
 
 # Name of your site (displayed in the header)
 name: Brian Newborn
@@ -21,12 +21,12 @@ avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/je
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email:bri.newborn@gmail.com
   facebook:
   flickr:
   github:
   instagram:
-  linkedin:
+  linkedin:https://www.linkedin.com/in/brian-newborn/
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter:
