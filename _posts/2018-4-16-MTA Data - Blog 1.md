@@ -38,12 +38,12 @@ Specifically, I worked mostly with Pandas, a valuable Python library used for ev
 Amidst a few exercises, I wanted to isolate our data to one station and drill into daily entries and exits. Being a Mets fan (LGM!), I decided to isolate the data to the 7 Train stop at Mets-Willets Point. This is the subway station you get off at when heading to Citi Field, home of the Mets. But, there are plenty of people living around here, as evidenced by the fact that there are at least a few thousand entries and exits through this station on a given day, even in January.
 
 <p align="center">
-  <img src="/assets/images/mta_images/citi_field.jpg" width="200" height="200" alt="Subway with Citi in the Background"/>
+  <img src="/assets/images/mta_images/citi_field.jpg" width="600" alt="Subway with Citi in the Background"/>
 </p>
 
 After filtering our larger dataset down to just this station, I then grouped turnstile counts by day to see entries/exits on a day-by-day basis.
 <p align="center">
-  <img src="/assets/images/mta_images/citi_daily_ridership_117.png" width="200" height="200" alt="Subway with Citi in the Background"/>
+  <img src="/assets/images/mta_images/citi_daily_ridership_117.png" width="600"  alt="Subway with Citi in the Background"/>
 </p>
 
 As you can see, there is a somewhat standard pattern for the first few weeks. Weekend ridership drops to around two thousand per day, while weekdays have closer to 5000 entries/exits per day. Thursdays and Fridays tend to be a bit higher than earlier weekdays, but this is not a massive difference. But wait, notice that huge spike on January 25? Why would there be so many more riders (over 16,000) versus other weekdays?
@@ -51,7 +51,7 @@ As you can see, there is a somewhat standard pattern for the first few weeks. We
 After double and triple checking my dataset for duplicates or bad values, I drilled further into the outlying data. Let's see the difference between entries and exits at Willets Point across the days - maybe there's a discrepancy there.
 
 <p align="center">
-  <img src="/assets/images/mta_images/citi_daily_entriesexits_117.png" width="200" height="200" alt="Subway with Citi in the Background"/>
+  <img src="/assets/images/mta_images/citi_daily_entriesexits_117.png" width="500" alt="Subway with Citi in the Background"/>
 </p>
 
 Daily exits are in red and entries are in purple.
@@ -65,7 +65,7 @@ I dug into local news articles from then, finding that there was actually a mass
 This would certainly make sense - Willets Point is somewhat of a larger station on the 7 Line, so maybe the MTA stopped trains there to avoid sending trains into a busy emergency scenario. And then after some more searching, I found our "smoking gun".
 
 <p align="center">
-  <img src="/assets/images/mta_images/NYCT_Subway_tweet.png" width="200" height="200" alt="Subway with Citi in the Background"/>
+  <img src="/assets/images/mta_images/NYCT_Subway_tweet.png" width="500" alt="Subway with Citi in the Background"/>
 </p>
 
 The MTA did in fact stop trains at Mets-Willets Point that day! [Link to the tweet here.](https://twitter.com/NYCTSubway/status/824370519537545217) And, note the time of this tweet. This fire occurred in the afternoon, so the majority of disrupted commutes would occur recorded as exits, since commuters were traveling back home to eastern Queens or Long Island. And anybody planning on taking the subway into Manhattan in the afternoon had to enter here instead of getting on at Main St.
@@ -73,7 +73,7 @@ The MTA did in fact stop trains at Mets-Willets Point that day! [Link to the twe
 So it certainly makes sense that exits were much higher at Mets-Willets than they normally would have, while entries were somewhat higher than their expected value.
 
 <p align="center">
-  <img src="/assets/images/mta_images/7train.png" width="200" height="200" alt="7 train route"/>
+  <img src="/assets/images/mta_images/7train.png" width="500" alt="7 train route"/>
 </p>
 
 When I found this tweet, I was really amazed that I was able to notice something odd in the data, look at the real-world context from that day, and ultimately find a likely cause. It feels pretty cool to be able to parse through a 700K line dataset and find patterns that match the real world. While this is no event to celebrate (I am certainly really sorry for those business owners and local residents that lost property in the fire), this code discovery is worth celebrating.
