@@ -43,7 +43,7 @@ Amidst a few exercises, I wanted to isolate our data to one station and drill in
 
 After filtering our larger dataset down to just this station, I then grouped turnstile counts by day to see entries/exits on a day-by-day basis.
 <p align="center">
-  <img src="/assets/images/mta_images/citi_daily_ridership_117.png" width="600"  alt="Subway with Citi in the Background"/>
+  <img src="/assets/images/mta_images/citi_daily_ridership_117.png" width="800"  alt="Entries/Exits at Citi"/>
 </p>
 
 As you can see, there is a somewhat standard pattern for the first few weeks. Weekend ridership drops to around two thousand per day, while weekdays have closer to 5000 entries/exits per day. Thursdays and Fridays tend to be a bit higher than earlier weekdays, but this is not a massive difference. But wait, notice that huge spike on January 25? Why would there be so many more riders (over 16,000) versus other weekdays?
@@ -51,7 +51,7 @@ As you can see, there is a somewhat standard pattern for the first few weeks. We
 After double and triple checking my dataset for duplicates or bad values, I drilled further into the outlying data. Let's see the difference between entries and exits at Willets Point across the days - maybe there's a discrepancy there.
 
 <p align="center">
-  <img src="/assets/images/mta_images/citi_daily_entriesexits_117.png" width="500" alt="Subway with Citi in the Background"/>
+  <img src="/assets/images/mta_images/citi_daily_entriesexits_117.png" width="800" alt="Subway Turnstiles by Entry/Exit by Day"/>
 </p>
 
 Daily exits are in red and entries are in purple.
