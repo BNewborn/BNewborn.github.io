@@ -2,7 +2,7 @@
 layout: post
 title: MTA Data - Metis Project 1
 description: A review of turnstile activity in Queens
-image: assets/images/mta_logo.gif
+image: assets/images/mta_images/mta_logo.gif
 ---
 
 Hello world! My name is Brian Newborn, and thanks for coming to my personal blog.

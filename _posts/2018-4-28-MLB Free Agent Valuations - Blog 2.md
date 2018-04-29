@@ -1,12 +1,12 @@
 ---
 layout: post
-title: MLB Free Agent Value Predictions
-description: Exploring and predicting MLB free agent valuations
+title: MLB Free Agency Predictions
+description: Exploring and Predicting MLB Free Agent Valuations
 image: assets/images/mlb_free_agent_images/baseball_thumbnail.jpg
 ---
 
 ## Intro
-For our second project at Metis, we were tasked with creating a linear regression model to predict any continuous variable. I took this opportunity to explore data related to MLB free agent values. I would be predicting per year salaries of players, should they become a free agent. For example, if a player received a contract paying them $100 Million over 10 years, my model would see that as a $10M/Year.
+For our second project at Metis, we were tasked with creating a linear regression model to predict some sort of continuous variable. I took this opportunity to explore data related to MLB free agent values. I would be predicting per year salaries of players, should they become a free agent. For example, if a player received a contract paying them $100 Million over 10 years, my model would see that as a $10M/Year.
 
 <p align="center">
   <img src="/assets/images/mlb_free_agent_images/header_photo.jpg" alt="Baseball"/>
@@ -15,13 +15,13 @@ For our second project at Metis, we were tasked with creating a linear regressio
 
 First, I had to figure out where to get this data. As you may be aware, there are dozens of sites on the internet that record, aggregate and release detailed baseball statistics. After all, this was the first sport to go through the "analytics revolution", starting almost 40 years ago in the early 1980s. I ultimately committed to using [Fangraphs](https://www.fangraphs.com/), as they do an excellent job of providing detailed stats as well as transparent explanations of any necessary assumptions in the data. I used [ESPN](http://www.espn.com/mlb/freeagents/_/year/2016/type/dollars) for free agent data, as their interface was extremely easy to read and ultimately scrape from the internet.
 
-I then had to decide what type of data I wanted to use. It was obvious that I would need free agent data like contract length, amount of money, player name and year from that side of things, but there was a lot of wiggle room for hitting stats to grab. I wanted to have a hybrid of both traditional (Home Runs, Doubles, Batting Average, Strikeouts) and advanced statistics (weighted runs created, Wins Above Replacement(WAR), and On-Base Percentage + Slugging aka OPS). I wanted this large basket so that I could capture the easy to see stats as well as those that analytics typically front as especially reflective of a player's effectiveness on the field.
+I then had to decide what type of data I wanted to use. It was obvious that I would need free agent data like contract length, amount of money, player name and year from that side of things, but there was a lot of wiggle room for hitting stats to grab. I wanted to have a hybrid of both traditional (Home Runs, Doubles, Batting Average, Strikeouts) and advanced statistics (weighted runs created, Wins Above Replacement(WAR), and On-Base Percentage + Slugging aka OPS). I wanted this large basket so that I could capture the easy to see stats as well as those that analytics typically fronts as reflective of a player's effectiveness on the field.
 
-As a personal aside, I tend to enjoy the hybrid of these stats in real life - I still appreciate a long home run or a "clutch" hit, but ultimately see immense value in advanced metrics telling us things we cannot see with just a "feel" for the game. I thank Michael Lewis for writing [Moneyball](https://en.wikipedia.org/wiki/Moneyball) in the early 2000's. While I was already a huge sports fan by middle school, this helped cement my love for the numbers behind the great plays.
+As a personal aside, I tend to enjoy the hybrid of these stats in real life - I still appreciate a long home run or a "clutch" hit, but ultimately see immense value in advanced metrics telling us things we cannot see with just a "feel" for the game. I thank Michael Lewis for writing [Moneyball](https://en.wikipedia.org/wiki/Moneyball) in the early 2000's. While I was already a huge sports fan by middle school, this helped cement my love for the numbers behind great teams in any sport.
 
 ## Grabbing Baseball Data from the Net
 
-After these decisions, I had to gather this data into a database for measurement and modeling. In class, we learned about a few tools to grab data off the internet. I started my attempt by using a Python library called [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/), which is an excellent tool for parsing through HTML code. However, I had to switch gears after a few false starts. I ended up using [Selenium](http://selenium-python.readthedocs.io/), a  library that allows one to mimic a browser and scrape data as if they were themselves clicking through the page. Selenium afforded me the flexibility and speed to scrape the above pages over the course of a few hours while I worked on other tasks. After scraping, I now had 4 large datasets. 3 were from Fangraphs; I individually scraped 3 of their hitting pages (Standard, Advanced and Value, respectively) for all hitting seasons between 2010 and 2017 (I'll mention later why I ultimately decided to break these down into 3 iterations versus 1 large scrape). The fourth dataset was ESPN's data recording all free agent contracts signed in that same time frame. Ultimately, from the 3500 or so hitters that had qualifying seasons between 2010 and 2017, there were 530 free agents that signed contracts then. These 530 player-seasons would be my modeling dataset, using about 60 statistics as independent, exploratory variables.
+After these decisions, I had to gather this data into a database for measurement and modeling. In class, we learned about a few tools to grab data off the internet. I started my attempt by using a Python library called [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/), which is an excellent tool for parsing through HTML code. However, I had to switch gears after a few false starts. I ended up using [Selenium](http://selenium-python.readthedocs.io/), a  library that allows one to mimic a browser and scrape data as if they were themselves clicking through the page. Selenium afforded me the flexibility and speed to scrape the above pages over the course of a few hours while I worked on other tasks. After scraping, I now had 4 large datasets. 3 were from Fangraphs; I individually scraped 3 of their hitting pages (Standard, Advanced and Value, respectively) for all hitting seasons between 2010 and 2017 (I'm planning on writing another blog post to detail the lessons learned from this exercise, including why I broke these down into distinct dataframes). The fourth dataset was ESPN's data recording all free agent contracts signed in that same time frame. Ultimately, from the 3500 or so hitters that had qualifying seasons between 2010 and 2017, there were 530 free agents that signed contracts then. These 530 player-seasons would be my modeling dataset, using about 60 statistics as independent, exploratory variables.
 
 ## Exploring My Data
 
@@ -36,12 +36,13 @@ This past free agent season was particularly noteworthy in the sports world beca
   <img src="/assets/images/mlb_free_agent_images/BizInsider_Headline.png" alt="Headline 2"/>
 </p>
 
-I wanted to see if the data supported this notion that 2017 was actually a bad year for free agents. When I summed up all money spent by year, I saw that the data did in fact back this up.
+The popular notion was that teams had more bargaining power this year over the free agent class, and used it to hold out and "low-ball" players with lesser offers than expected. I wanted to see if the data supported this notion that 2017 was actually a bad year for free agents. When I summed up all money spent by year, I saw that the data did in fact back this up.
 
 <p align="center">
   <img src="/assets/images/mlb_free_agent_images/Free_Agents_Total_By_Year.png" alt="Free Agents Total By Year"/>
 </p>
 
+As you can see, 2017 featured the first off-season in 8 years with a consecutive yearly drop in money paid out over free agency. This naturally has scared both Agents as well as the Players Union, who see this as a threat to their livelihoods.
 
 There's also been a mainstream belief that hitting is struggling as of late, as [pitchers get stronger](http://bleacherreport.com/articles/1559656-the-truth-behind-the-rise-of-the-strikeout-in-major-league-baseball) and [defensive shifts penalize hitters in the long run](https://fivethirtyeight.com/features/yes-the-infield-shift-works-probably/). At least, batting average has seemed to take a dive in the last few decades. Remember that batting average simply measures hits over at-bats. It leaves little room for nuance (are certain hits better than others, like a HR versus a single?) and famously doesn't include walks (which is pretty much the TLDR Sparknotes for Lewis' Moneyball book - sorry for spoiling). But this narrative has a more interesting underside - that hitters are actually swinging for the fences more. And they're connecting - home runs are [even more prevalent](https://www.washingtonpost.com/news/fancy-stats/wp/2017/06/01/mlb-home-run-spike-shows-statcast-science-is-more-potent-than-steroids/?utm_term=.c3277dca83fc) than they were during the famed Steroid Era. There are a few theories for why this has happened - like my favorite baseball conspiracy theory, that the MLB has introduced ["juiced" balls to facilitate more exciting home runs](https://www.theringer.com/2017/5/9/16040456/2017-mlb-home-run-rate-is-the-ball-juiced-report-results-6e1dd0233203). But I tend to lean more towards the analytics here. There's a lot of evidence that hitting home runs (and getting more outs) is better than hitting smaller hits more often. The idea has basis in a simple risk/reward concept; the reward of a home-run (one swing, at least one run), is worth more than the risk of an out. While finding out if this was true was beyond the scope of my analysis, I at least wanted to see if power hitting stats have been increasing in our last 8 seasons.
 
@@ -79,7 +80,7 @@ However, when you graph free agent yearly salaries, you see something dramatical
 
 This doesn't mean a linear model is impossible, it just means we may have more trouble than we'd like in finding one that works.
 
-Undeterred, I first tried creating models that used the raw $/Year measurement. These models struggled to provide good explanations of the variation in free agent salary, however. I tried many combinations of regularization (penalizing data columns that are highly correlated and removing data that's superfluous), polynomial transformations (squaring or cubing our stats to see if exponential relationships helped) and selecting the "K Best" number of features (only taking a subselect of the data points available). Ultimately none of these combos could provide us a model that neither overestimated or underestimated player salary.
+Undeterred, I first tried creating models that used the raw $/Year measurement. These models struggled to provide good explanations of the variation in free agent salary, however. I tried many combinations of regularization (penalizing data columns that are highly correlated and removing data that's superfluous), polynomial transformations (squaring or cubing our stats to see if exponential relationships helped) and selecting the "K Best" number of features (only taking a subset of the stats available across all hitters). Ultimately none of these combos could provide us a model that neither consistently overestimated or underestimated player salary.
 
 Here's a result of one of these models - if our model was consistently between overestimating and underestimating we'd see data (blue) perfectly along the red line here. However, you can see some serious fluctuations around this line. This chart is one example of behavior I saw in linear models over and over again.
 
@@ -133,7 +134,7 @@ But the model also, relatively highly, valued Slugging Percentage over other adv
 
 ## Lessons
 
-I learned a lot from this project, both in the technical sense as well as from the project management side of data science. I feel strongly about recording these lessons, so I am going to save these for my next blog. There I want to flesh out some of the lessons and mistakes I made during this process. I think this is a crucial step towards improvement, and am excited to track these thoughts as I improve as a Data Scientist
+I learned a lot from this project, both in the technical sense as well as from the project management side of data science. I feel strongly about recording these ideas, so I am going to save these for my next blog. There I want to flesh out some of the lessons learned and mistakes made during this process. I think this is a crucial step towards improvement, and am excited to track these thoughts as I improve as a Data Scientist
 
 Thanks! Let me know your thoughts or questions, as always
 
