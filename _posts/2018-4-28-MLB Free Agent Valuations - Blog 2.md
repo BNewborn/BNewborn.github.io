@@ -84,7 +84,7 @@ Undeterred, I first tried creating models that used the raw $/Year measurement. 
 Here's a result of one of these models - if our model was consistently between overestimating and underestimating we'd see data (blue) perfectly along the red line here. However, you can see some serious fluctuations around this line. This chart is one example of behavior I saw in linear models over and over again.
 
 <p align="center">
-  <img src="/assets/images/mlb_free_agent_images/QQ_Regular" alt="QQ For Untransformed Data"/>
+  <img src="/assets/images/mlb_free_agent_images/QQ_Regular.png" alt="QQ For Untransformed Data"/>
 </p>
 
 I hypothesize that this is due to the nature of free agency salaries - there is a heavy skew to the right with a few really highly paid players while most labor for close to the league minimum.  
@@ -94,7 +94,7 @@ One way to get around this is to "log" our independent variable. This means that
 In fact, it did! My model, now using log(dollars/year) had substantially better results in avoiding over/undersestimating salaries.
 
 <p align="center">
-  <img src="/assets/images/mlb_free_agent_images/QQ_Log" alt="QQ For Transformed Data"/>
+  <img src="/assets/images/mlb_free_agent_images/QQ_Log.png" alt="QQ For Transformed Data"/>
 </p>
 
 While this model still left plenty to be desired, it was at least now consistent with the pre-requisites of linear regression.
