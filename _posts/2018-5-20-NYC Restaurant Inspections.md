@@ -2,7 +2,7 @@
 layout: post
 title: NYC Restaurant Grade Prediction
 description: Predicting if a restaurant will get an "A" from the Health Department
-image: /assets/images/nyc_restaurant_images/a_grade_real.jpg
+image: /assets/images/nyc_restaurant_images/a_grade_real.png
 ---
 
 ## Intro
@@ -12,7 +12,7 @@ For our third project at Metis, I was expected to create a type of classificatio
 For this project, I built the following scenario: a few Senior Staffers in the NYC Department of Health and Mental Hygeine approached me with a question - they have designed an intervention that they believe can help restaurants improve their food safety habits and practices. They want to specifically target restaurants that do not get an "A" from the city, so that they can help these businesses maintain healthy food safety as well as mitigate bureaucratic costs for the city. A true win-win-win for citizens, business owners and the City Treasury.
 
 <p align="center">
-  <img src="/assets/images/nyc_restaurant_images/a_grade_real.jpg" alt="A Grade"/>
+  <img src="/assets/images/nyc_restaurant_images/a_grade_real.png" alt="A Grade"/>
 </p>
 
 ## Data
