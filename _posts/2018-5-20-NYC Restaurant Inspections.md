@@ -11,9 +11,10 @@ For our third project at Metis, I was expected to create a type of classificatio
 ## The Question
 For this project, I built the following scenario: a few Senior Staffers in the NYC Department of Health and Mental Hygeine approached me with a question - they have designed an intervention that they believe can help restaurants improve their food safety habits and practices. They want to specifically target restaurants that do not get an "A" from the city, so that they can help these businesses maintain healthy food safety as well as mitigate bureaucratic costs for the city. A true win-win-win for citizens, business owners and the City Treasury.
 
-<p align="center">
+![A Grade](/assets/images/nyc_restaurant_images/a_grade_real.png){:height="50%" width="50%"}
+<!-- <p align="center">
   <img src="/assets/images/nyc_restaurant_images/a_grade_real.png" alt="A Grade" width="40%"/>
-</p>
+</p> -->
 
 ## Data
 I downloaded historical restaurant inspection data from [NYC OpenData](https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/xx67-kt59). This portal features raw data across many sectors, but specifically also includes a line by line database of every inspection since 2014. I also downloaded data from the Federal Census Bureau and the New York State Liquor License database, though I was only able to successfully join the former with our NYC data. Ultimately, my inputs looked something like this:
