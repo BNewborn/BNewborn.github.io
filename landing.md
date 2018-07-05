@@ -16,8 +16,9 @@ nav-menu: true
 			<h2>Brian Newborn</h2>
 		</header>
 
-		<img src="/assets/images/bn_headshot.jpg" alt="Me!">
-		<!-- <img src="/assets/images/bn_headshot.jpg" alt="Me!" width="128" height="128"> -->
+		<!-- <img src="/assets/images/bn_headshot.jpg" alt="Me!"> -->
+		<!-- 800 × 1200 -->
+		<img src="/assets/images/bn_headshot.jpg" alt="Me!" width="400" height="600">
 		<!-- ![Me!](/assets/images/bn_headshot.jpg){:height="30%" width="30%"} -->
 
 		<p>I have always enjoyed discovering new information, and then best figuring out how to share that with all types of audiences. What may have started with trying to figure out how to best share my excitement over Thomas Jefferson with my mother blossomed into a role as a University Tour Guide at the University of Virginia. There I had the chance to learn hundreds of pages of UVA history and facts, and then share it every day with a new, diverse audience. I gave almost 100 tours during my four years at school not for the glory (of which there wasn't much...) but because I love finding the best way to distill useful information for the audience at hand.
