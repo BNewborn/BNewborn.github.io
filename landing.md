@@ -32,7 +32,7 @@ nav-menu: true
 		<p>If you're here, you may have seen some of my projects, ranging from predictions on MLB salaries to a dashboard helping to understand the NY State Legislature. I am excited to see where the next step takes me, and will always look out for a unique, insightful story to share.
 		</p>
 		<p>Thanks for visiting!</p>
-		<p>[Email](mailto:bri.newborn@gmail.com)</p>
+		<a href="mailto:bri.newborn@gmail.com">Email</a>
 	</div>
 </section>
 
