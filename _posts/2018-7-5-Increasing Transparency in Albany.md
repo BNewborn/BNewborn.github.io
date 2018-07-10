@@ -49,9 +49,6 @@ Ultimately, this analysis is only as useful as the takeaways that we can provide
 
 For this dashboard, I made a few pieces of information easily available. First, in the top left, you'll have a by-topic bar graph of bills adopted and proposed in a given month/year. This serves as the launch point for the other data you'll see. Click on a topic like "education", and the rest of the dashboard updates.
 
-![Link to Dashboard](http://bnsenatefinal-env.qtqc42jatv.us-east-1.elasticbeanstalk.com/)
-**Note as of 7/10/18** this dashboard has been taken down to conserve computing power - it can be brought up easily. If you want to review, please email me directly: [email](mailto:bri.newborn@gmail.com)
-
 ![My Dashboard](/assets/images/state_senate_images/full_dashboard.png){:height="50%" width="50%"}
 
 On the top right, you'll see two tables. These represent the lawmakers, in both the Senate and Assembly, that have proposed and passed the most laws in education (or any other selected section) in that year. This is very valuable insight for an advocacy team. I studied Public Policy in college, and we once had an assignment to design policy advocacy strategy. It took me days to filter through recent legislation to figure out common co-sponsors across an issue type, and this dashboard does that in just a click. An organization can use this to figure out which lawmakers can be approached as allies for voting or drafting laws, as well as which should potentially be targeted as swing votes for their passion causes.
@@ -77,9 +74,6 @@ I presented these findings, and a demo of my dashboard to Metis' Spring Career D
 But for now, I am excited about this product. I had a lot of fun working in Dash to get the dashboard to be user-friendly, and am looking forward to getting even better with it in future data visualization questions.
 
 *The code for this project is summarized and cleaned [here](https://github.com/BNewborn/nys_senate)* in GitHub.
-
-![Link to Dashboard](http://bnsenatefinal-env.qtqc42jatv.us-east-1.elasticbeanstalk.com/)
-**Note as of 7/10/18** this dashboard has been taken down to conserve computing power - it can be brought up easily. If you want to review, please email me directly: [email](mailto:bri.newborn@gmail.com)
 
 Thanks for reading! Let me know your thoughts or questions, as always
 
