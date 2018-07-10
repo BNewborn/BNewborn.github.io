@@ -49,7 +49,8 @@ Ultimately, this analysis is only as useful as the takeaways that we can provide
 
 For this dashboard, I made a few pieces of information easily available. First, in the top left, you'll have a by-topic bar graph of bills adopted and proposed in a given month/year. This serves as the launch point for the other data you'll see. Click on a topic like "education", and the rest of the dashboard updates.
 
-![Link to Dashboard!](http://bnsenatefinal-env.qtqc42jatv.us-east-1.elasticbeanstalk.com/)
+![Link to Dashboard](http://bnsenatefinal-env.qtqc42jatv.us-east-1.elasticbeanstalk.com/)
+**Note as of 7/10/18** this dashboard has been taken down to conserve computing power - it can be brought up easily. If you want to review, please email me directly: [email](mailto:bri.newborn@gmail.com)
 
 ![My Dashboard](/assets/images/state_senate_images/full_dashboard.png){:height="50%" width="50%"}
 
@@ -77,7 +78,8 @@ But for now, I am excited about this product. I had a lot of fun working in Dash
 
 *The code for this project is summarized and cleaned [here](https://github.com/BNewborn/nys_senate)* in GitHub.
 
-[Link to Dashboard!](http://bnsenatefinal-env.qtqc42jatv.us-east-1.elasticbeanstalk.com/)
+![Link to Dashboard](http://bnsenatefinal-env.qtqc42jatv.us-east-1.elasticbeanstalk.com/)
+**Note as of 7/10/18** this dashboard has been taken down to conserve computing power - it can be brought up easily. If you want to review, please email me directly: [email](mailto:bri.newborn@gmail.com)
 
 Thanks for reading! Let me know your thoughts or questions, as always
 
