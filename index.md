@@ -7,4 +7,4 @@ image: null
 author: null
 ---
 
-ABOUT ME - Click here to learn more about Brian
+Click here to learn more about Brian
