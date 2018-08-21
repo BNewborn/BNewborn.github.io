@@ -2,7 +2,7 @@
 layout: post
 title: Visualizing the Seattle Housing Market
 description: Visualizations via Tableau
-image: /assets/images/state_senate_images/legislature.png
+image: /assets/images/seattle/skyline.jpg
 ---
 
 Since graduating Metis, I have had time to work on personal projects as well as to continue to build skills in relevant, exciting aspects of data science and data analysis. As part of this, I have been working to learn Tableau on my own. And, as almost any data science or coding blog will tell you - the best way to learn something is to try it out yourself, figuring out steps as you go.
